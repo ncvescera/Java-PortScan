@@ -22,6 +22,8 @@ public class Scanner {
     private boolean complete_scan   = false;
     private boolean single_scan     = false;
     
+    
+    
     public Scanner(String ip){
         this.ip = ip;
         
@@ -61,7 +63,7 @@ public class Scanner {
             try{
                 socket = new Socket(ip,port);
                 socket.close();
-                System.out.println("\tPort "+port+" is open");
+                System.out.println("\tPort "+port+"("+PortToName.toService(port)+")"+" is open");
             } catch(IOException e){
                 //System.out.println();
             }
@@ -74,9 +76,9 @@ public class Scanner {
         try{
             socket = new Socket(ip,port);
             socket.close();
-            System.out.println("\tPort "+port+" is open");
+            System.out.println("\tPort "+port+"("+PortToName.toService(port)+")"+" is open");
         } catch(IOException e){
-            System.out.println("\tPort "+port+" is closed");
+            System.out.println("\tPort "+port+"("+PortToName.toService(port)+")"+" is closed");
         }
     }
     
@@ -95,7 +97,7 @@ public class Scanner {
             try{
                 socket = new Socket(ip,port);
                 socket.close();
-                System.out.println("\tPort "+port+" is open");
+                System.out.println("\tPort "+port+"("+PortToName.toService(port)+")"+" is open");
             } catch(IOException e){
                 //la porta è chiusa
                 //System.out.println("\tPort "+port+" is closed");
