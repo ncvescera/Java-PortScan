@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package scantcp;
 
 import java.io.IOException;
@@ -65,7 +60,7 @@ public class Scanner {
                 socket.close();
                 System.out.println("\tPort "+port+"("+PortToName.toService(port)+")"+" is open");
             } catch(IOException e){
-                //System.out.println();
+                //la porta è chiusa
             }
         }
     }
@@ -100,7 +95,6 @@ public class Scanner {
                 System.out.println("\tPort "+port+"("+PortToName.toService(port)+")"+" is open");
             } catch(IOException e){
                 //la porta è chiusa
-                //System.out.println("\tPort "+port+" is closed");
             }
         }
     }
